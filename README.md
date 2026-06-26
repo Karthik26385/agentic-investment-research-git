@@ -43,6 +43,7 @@ User command ("start SIMULATION", "Start BACKTESTING 10 Days", etc.)
                ├── Step 7    Gmail MCP email report
                └── Step 8    post_market_review.md (4 PM ET)
 ```
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b4ce15e6-522d-461a-bed1-f388beaa6e1f" />
 
 ---
 
