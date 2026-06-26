@@ -1,0 +1,12 @@
+{
+  "date": "YYYY-MM-DD",
+  "mode": "SIMULATION",
+  "regime": "UNKNOWN",
+  "candidates": [],
+  "execution_summary": {
+    "approved": [],
+    "watch": [],
+    "rejected": [],
+    "note": "Template file — candidates populate after running the full pipeline."
+  }
+}

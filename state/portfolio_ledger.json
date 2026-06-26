@@ -1,0 +1,45 @@
+{
+  "mode": "SIMULATION",
+  "_note": "Template file — fresh $100 start. No prior trade history.",
+  "account": {
+    "starting_capital": 100.00,
+    "current_capital": 100.00,
+    "cash": 100.00,
+    "deployed_pct": 0.0,
+    "peak_capital": 100.00,
+    "max_drawdown_pct": 0.0,
+    "last_updated": "YYYY-MM-DD",
+    "last_price_source": "not yet set"
+  },
+  "positions": [],
+  "closed_trades": [],
+  "equity_curve": [],
+  "metrics": {
+    "total_trades": 0,
+    "open_trades": 0,
+    "closed_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "breakeven": 0,
+    "win_rate_pct": null,
+    "avg_win_pct": null,
+    "avg_loss_pct": null,
+    "realized_pnl": 0.00,
+    "unrealized_pnl": 0.00,
+    "total_pnl": 0.00,
+    "total_return_pct": 0.0,
+    "peak_capital": 100.00,
+    "max_drawdown_pct": 0.0,
+    "stop_protection_value": 0.00
+  },
+  "pending_actions": {},
+  "rules": {
+    "max_position_size_pct": 100.0,
+    "bear_regime_cap_pct": 50.0,
+    "max_daily_trades": 2,
+    "min_rr_ratio": 2.0,
+    "portfolio_review_runs_first": true,
+    "no_reentry_same_day_as_stop": true,
+    "never_modify_closed_trades": true
+  }
+}

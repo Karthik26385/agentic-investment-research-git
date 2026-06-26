@@ -1,0 +1,4 @@
+{
+  "_note": "Template file. Appended by backtesting_engine.md. Each run adds a SID-keyed block tagged source: BACKTEST. Never mixed with live simulation data.",
+  "runs": []
+}

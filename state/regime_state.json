@@ -1,0 +1,19 @@
+{
+  "current": {
+    "regime": "SIDEWAYS",
+    "sub_label": "INITIALIZING — run signal agents to classify",
+    "confidence": "LOW",
+    "date": "YYYY-MM-DD",
+    "score": 0.00,
+    "data_source": "not yet run"
+  },
+  "signal_weights": {
+    "macro_agent": 0.20,
+    "earnings_agent": 0.20,
+    "tech_agent": 0.20,
+    "sentiment_agent": 0.20,
+    "geo_agent": 0.20,
+    "_note": "Weights equal at initialization. Post-market learning adjusts based on rolling 20-day accuracy (manual process — see performance_log.json)."
+  },
+  "history": []
+}

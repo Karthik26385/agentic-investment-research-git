@@ -1,0 +1,23 @@
+# Generated pipeline output — large, personal, not part of the repo
+FinalResearchoutput/
+
+# Live portfolio archives (real trade history — never publish)
+state/portfolio_ledger_archive*.json
+
+#github instruction
+workflows/github_release.md
+
+# Secrets — should never exist in this directory but listed as safeguard
+.env
+.env.*
+*.key
+*.pem
+*.token
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude local config (lives outside the repo at ~/.claude.json — never commit)
+# Contains MCP server tokens and project-scoped credentials

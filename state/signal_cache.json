@@ -1,0 +1,13 @@
+{
+  "last_updated": "YYYY-MM-DD",
+  "_note": "Template file — intentionally stale date forces all 5 agents to re-run fresh on first pipeline execution.",
+  "agents": {
+    "macro_agent":     { "status": "stale", "date": "YYYY-MM-DD", "score": 0, "weighted_score": 0.00 },
+    "earnings_agent":  { "status": "stale", "date": "YYYY-MM-DD", "score": 0, "weighted_score": 0.00 },
+    "tech_agent":      { "status": "stale", "date": "YYYY-MM-DD", "score": 0, "weighted_score": 0.00 },
+    "sentiment_agent": { "status": "stale", "date": "YYYY-MM-DD", "score": 0, "weighted_score": 0.00 },
+    "geo_agent":       { "status": "stale", "date": "YYYY-MM-DD", "score": 0, "weighted_score": 0.00 }
+  },
+  "aggregated_regime_score": 0.00,
+  "regime_classification": "UNKNOWN"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "robinhood-trading",
+  "type": "mcp_server",
+  "status": "not_registered",
+  "endpoint": "https://agent.robinhood.com/mcp/trading",
+  "transport": "http",
+  "cli_command": "claude mcp add robinhood-trading --transport http https://agent.robinhood.com/mcp/trading",
+  "auth": {
+    "type": "robinhood_oauth",
+    "provider": "robinhood",
+    "state": "pending_registration",
+    "note": "Run the CLI command above, then restart Claude Code session to activate"
+  },
+  "tool_prefix": "mcp__robinhood_trading__",
+  "expected_tools": [
+    "get_quote",
+    "get_portfolio",
+    "get_positions",
+    "place_order",
+    "cancel_order",
+    "get_order_status",
+    "get_historical_prices",
+    "get_options_chain"
+  ],
+  "project_config": {
+    "enabled": false,
+    "modes_that_need_it": ["EXECUTION", "SIMULATION", "RESEARCH"],
+    "modes_that_require_it": ["EXECUTION"],
+    "pipeline_steps": {
+      "step_F": "Live price check (price validity gate — all modes)",
+      "step_7_monitoring": "Intraday stop monitoring",
+      "step_8": "Fetch actual close prices for post-market review",
+      "execution": "Place real orders (EXECUTION mode only — requires human confirmation first)"
+    },
+    "fallback_without_robinhood": "WebSearch for approximate prices (less accurate; Step F mitigates risk)"
+  },
+  "connect": {
+    "command": "claude mcp add robinhood-trading --transport http https://agent.robinhood.com/mcp/trading",
+    "status": "not registered — run command above then restart Claude Code",
+    "verify": "claude mcp list"
+  },
+  "safety_gates": {
+    "EXECUTION_mode_only": "Place orders only when active_mode == EXECUTION",
+    "human_confirmation": "Always display full trade card and await explicit CONFIRM before placing any order",
+    "counter_thesis_STRONG_blocks": "STRONG counter-thesis rating blocks all order placement",
+    "max_drawdown_5pct_halts": "Portfolio drawdown >= 5% halts all new orders"
+  }
+}

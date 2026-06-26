@@ -1,0 +1,23 @@
+{
+  "name": "plugin:vercel:vercel",
+  "type": "mcp_plugin",
+  "status": "needs_authentication",
+  "endpoint": "https://mcp.vercel.com",
+  "transport": "HTTP",
+  "auth": {
+    "type": "oauth2",
+    "provider": "vercel",
+    "managed_by": "claude.ai plugin system",
+    "state": "requires_reconnect"
+  },
+  "plugin_id": "vercel",
+  "enabled_in_settings": true,
+  "project_config": {
+    "enabled": false,
+    "planned_use": "Not currently planned for this pipeline",
+    "note": "Vercel plugin is globally enabled in claude.ai settings but has no current integration with the AI-MarketResearch-Agent project"
+  },
+  "reconnect": {
+    "instructions": "Open claude.ai Settings > Integrations > Vercel > Reconnect"
+  }
+}

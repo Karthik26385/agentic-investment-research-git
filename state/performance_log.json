@@ -1,0 +1,23 @@
+{
+  "_note": "Template file. Populated by post_market_review.md after each trading day.",
+  "signal_accuracy": {
+    "macro_agent":     { "predictions": 0, "correct": 0, "accuracy_pct": null },
+    "earnings_agent":  { "predictions": 0, "correct": 0, "accuracy_pct": null },
+    "tech_agent":      { "predictions": 0, "correct": 0, "accuracy_pct": null },
+    "sentiment_agent": { "predictions": 0, "correct": 0, "accuracy_pct": null },
+    "geo_agent":       { "predictions": 0, "correct": 0, "accuracy_pct": null }
+  },
+  "counter_thesis_validation": {
+    "total_reviewed": 0,
+    "strong_rejections": 0,
+    "strong_rejections_correct": 0,
+    "validation_rate_pct": null
+  },
+  "trade_outcomes": [],
+  "regime_accuracy": {
+    "total_days": 0,
+    "correct_calls": 0,
+    "accuracy_pct": null
+  },
+  "daily_learnings": []
+}

@@ -1,0 +1,35 @@
+{
+  "name": "claude.ai Google Drive",
+  "type": "mcp_server",
+  "status": "needs_authentication",
+  "endpoint": "https://drivemcp.googleapis.com/mcp/v1",
+  "transport": "HTTP",
+  "auth": {
+    "type": "oauth2",
+    "provider": "google",
+    "managed_by": "claude.ai connector",
+    "state": "requires_reconnect"
+  },
+  "tool_prefix": "mcp__claude_ai_GoogleDrive__",
+  "expected_tools": [
+    "list_files",
+    "get_file",
+    "search_files",
+    "create_file",
+    "update_file",
+    "delete_file",
+    "list_folders",
+    "create_folder",
+    "share_file"
+  ],
+  "project_config": {
+    "enabled": false,
+    "planned_use": "Export daily research output files to a shared Drive folder for archival and cross-device access",
+    "pipeline_step": "Not yet integrated",
+    "target_folder": "AI-MarketResearch-Agent/FinalResearchoutput/"
+  },
+  "reconnect": {
+    "instructions": "Open claude.ai Settings > Integrations > Google Drive > Reconnect and complete OAuth2",
+    "note": "Same Google account as Gmail connector"
+  }
+}

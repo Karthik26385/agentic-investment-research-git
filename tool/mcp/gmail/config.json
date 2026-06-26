@@ -1,0 +1,49 @@
+{
+  "name": "claude.ai Gmail",
+  "type": "mcp_server",
+  "status": "not_connected",
+  "endpoint": "https://gmailmcp.googleapis.com/mcp/v1",
+  "transport": "HTTP",
+  "auth": {
+    "type": "oauth2",
+    "provider": "google",
+    "managed_by": "claude.ai connector",
+    "connector_uuid": "YOUR_GMAIL_CONNECTOR_UUID"
+  },
+  "tool_prefix": "mcp__claude_ai_Gmail__",
+  "available_tools": [
+    "create_draft",
+    "list_drafts",
+    "get_thread",
+    "search_threads",
+    "create_label",
+    "delete_label",
+    "update_label",
+    "list_labels",
+    "label_message",
+    "unlabel_message",
+    "label_thread",
+    "unlabel_thread"
+  ],
+  "missing_tools": [
+    "send_message",
+    "delete_message",
+    "move_to_trash",
+    "get_attachment"
+  ],
+  "project_config": {
+    "enabled": false,
+    "trigger": "mode.email_report == true",
+    "recipient": "YOUR_EMAIL@gmail.com",
+    "subject_template": "[{MODE}] Daily Brief — {DATE} | {REGIME} | {SENTIMENT}",
+    "pipeline_step": 7,
+    "note": "Drafts are created automatically; user must send manually (no send_message tool available)"
+  },
+  "connect": {
+    "instructions": "Go to claude.ai → Settings → Integrations → Gmail → Connect, complete OAuth2 flow, then update connector_uuid above"
+  },
+  "reconnect": {
+    "instructions": "If disconnected, re-authenticate via claude.ai Settings > Integrations > Gmail",
+    "connector_uuid": "YOUR_GMAIL_CONNECTOR_UUID"
+  }
+}

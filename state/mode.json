@@ -1,0 +1,62 @@
+{
+  "active_mode": "SIMULATION",
+  "_comment": "Change active_mode to switch system behavior. RESEARCH = analysis only. SIMULATION = paper trading. EXECUTION = live trading (requires Robinhood MCP + human confirmation). BACKTESTING = historical simulation.",
+  "modes": {
+    "RESEARCH": {
+      "output_dir": "FinalResearchoutput/research/",
+      "portfolio_tracking": false,
+      "execution": "none",
+      "position_size_cap_pct": null,
+      "max_daily_trades": null,
+      "robinhood_mcp": "quotes_only",
+      "auto_stop_check": false,
+      "human_confirmation": false,
+      "email_report": false
+    },
+    "SIMULATION": {
+      "output_dir": "FinalResearchoutput/simulation/",
+      "portfolio_tracking": true,
+      "starting_capital": 100,
+      "execution": "paper",
+      "position_size_cap_pct": 100.0,
+      "max_daily_trades": 2,
+      "robinhood_mcp": "quotes_only",
+      "auto_stop_check": true,
+      "human_confirmation": false,
+      "email_report": true
+    },
+    "BACKTESTING": {
+      "output_dir": "FinalResearchoutput/backtesting/",
+      "portfolio_tracking": false,
+      "execution": "historical_simulation",
+      "position_size_cap_pct": 100.0,
+      "max_daily_trades": 2,
+      "human_confirmation": false,
+      "email_report": false,
+      "look_ahead_bias_warning": true,
+      "default_lookback_days": 10,
+      "_note": "Runs backtesting_engine.md over the last N trading days. N passed with trigger command. Outputs to FinalResearchoutput/backtesting/[RUNDATE]/[DATE]_[SID]_Backtest_*.md. Backtest days do NOT count toward the 10-day EXECUTION gate."
+    },
+    "EXECUTION": {
+      "output_dir": "FinalResearchoutput/live/",
+      "portfolio_tracking": true,
+      "execution": "real",
+      "position_size_cap_pct": 0.5,
+      "max_daily_trades": 2,
+      "max_order_usd": 500,
+      "_max_order_usd_note": "Hard dollar cap per order. Raise intentionally before live trading.",
+      "robinhood_mcp": "full",
+      "auto_stop_check": true,
+      "human_confirmation": true,
+      "email_report": true,
+      "safety_gates": [
+        "counter_thesis_STRONG_blocks_all_entry",
+        "regime_BEAR_halves_position_size",
+        "max_drawdown_5pct_halts_new_trades",
+        "min_10_simulation_days_before_live",
+        "min_win_rate_45pct_before_live",
+        "max_order_usd_enforced_per_order"
+      ]
+    }
+  }
+}
